@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap');
+
+// font-family: 'Josefin Sans', sans-serif;
+// font-family: 'Aleo', serif;
+
+@import 'mixins';
+@import 'normalize';
+@import 'variables';
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: 1.6rem/1 $aleo-font;
+    border: 4px solid #fff;
+    background-color: #041F48;
+}
+
+section {
+    height: 100vh;
+}
+
+.container {
+    margin: auto;
+    max-width: 1140px;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-image: url(../img/first-screen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    min-height: 100%;
+    
+    &__title {
+        padding: 14% 10px 10px;
+        margin: 0;
+        text-transform: uppercase;
+        @include text($color: #fff, $family: $josefin-font, $size: 4.8rem, $weight: 700, $line: 1.2);
+        letter-spacing: 1px;
+    }
+
+    &__subtitle {
+        margin: 0;
+        @include text($color: #fff, $family: $josefin-font, $size: 2.2rem, $weight: 400, $line: 1);
+        letter-spacing: 0.45rem;
+    }
+    
+    &__search {
+        @include text($color: #fff, $family: $josefin-font, $size: 1.4rem, $weight: 400, $line: 1);
+        display: inline-block;
+        margin: 40px 0 95px;  
+    }
+
+    &__scroll {
+        display: block;
+    }
+}
+
+.search {
+    &__input::placeholder {
+        color: #999;
+        opacity: .8;
+    }
+
+    &__input {
+        background-color: #fff;
+        font-size: 1.8rem;
+        color: #999;
+        margin: 0;
+    }
+
+    &__btn {
+        font-family: $aleo-font;
+        margin: 0;
+        border: 2px solid #fff;
+        background-color: #5474FD;
+        color: #fff;
+    }
+}
+
+.scroll {
+    &__text {
+        color: #fff;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        font-family: $josefin-font;
+    }
+    
+    &__arrow {
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
+.nav {
+    margin: -80px 0 0 0;
+    width: 100%;
+    height: 80px;
+    background-color: #5474FD;
+    padding: 0 165px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: fixed;
+    
+    &__logo {
+        text-decoration: none;
+        @include text($color: #fff, $family: $josefin-font, $size: 2.4rem, $weight: 400, $line: 1);
+    }
+    
+    &__menu {
+        list-style: none;
+    }
+}
+
+.menu {
+    &__item {
+        display: inline-block;
+        margin-left: 20px;
+        
+    }
+    
+    &__link {
+        text-decoration: none;
+        @include text($color: #fff, $family: $aleo-font, $size: 1.4rem, $weight: 400, $line: 1);
+        
+    }
+}
+
+
+.store {
+    background-image: url(../img/second-screen.png);
+    display: flex;
+
+    &__info {
+        text-align: left;
+        width: 44%;
+        
+    }
+    
+    &__img {
+        width: 40%;
+    }
+}
+
+.info {
+    &__title {
+        @include text($color: #fff, $family: $aleo-font, $size: 3.6rem, $weight: 400, $line: 1);
+        margin-bottom: 50px;
+    }
+    &__text {
+        @include text($color: $text-color, $family: $josefin-font, $size: 1.6rem, $weight: 400, $line: 1.6);
+        margin-bottom: 30px;
+        
+    }
+    &__btn {
+        text-transform: uppercase;
+        border: none;
+        @include text($color: #fff, $family: $aleo-font, $size: 1.6rem, $weight: 400, $line: 1);
+        background-color: #496BFE;
+        text-align: center;
+        padding: 20px 28px;
+        letter-spacing: 1px;
+    }
+}
+
+.img {
+    &__foto2 {
+        margin: 0 0 0 30%;
+    }
+}
+
+.plan {
+    max-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #333333;
+    
+    &__i {
+        font-size: 4rem;
+    }
+    
+    &__text {
+        @include text($color: $text-color, $family: $aleo-font, $size: 3.6rem, $weight: 400, $line: 1);
+        
+    }
+}
+
+.option1, .option2 {
+    &__country {
+        @include text($color: $text-color, $family: $josefin-font, $size: 2rem, $weight: 400, $line: 1);
+        
+    }
+    
+    &__hotel {
+        text-transform: uppercase;
+        @include text($color: $text-color, $family: $aleo-font, $size: 2rem, $weight: 400, $line: 1);
+        
+    }
+    
+    &__text {
+        @include text($color: $text-color, $family: $aleo-font, $size: 1.6rem, $weight: 400, $line: 1);
+
+    }
+
+    &__btn {
+
+    }
+}
+
+.bg {
+    background-color: #232323;
+    opacity: .9;
+}
+
+.option1 {
+    background-image: url(../img/third-screen.png);
+    
+}
+
+.option2 {
+    background-image: url(../img/fourth-screen.png);
+}
